@@ -28,6 +28,15 @@
             width: 500px
         .slick-dots
             padding-left: 80px
+    .catalog
+        &__content
+            justify-content: space-around
+    .catalog-item
+        &:nth-child(even)
+            margin-right: 30px
+        &:nth-child(odd)
+            margin-left: 30px              
+                
 @media (max-width: 766px)
     .header
         flex-direction: row
@@ -99,6 +108,30 @@
             width: 370px
         .slick-dots
             padding-left: 75px
+    .catalog
+        padding-bottom: 50px
+        &__content
+            justify-content: space-between
+            margin-top: 40px
+        &__tabs
+            margin-top: 35px
+            justify-content: center
+        &__tab
+            width: 160px             
+    .catalog-item
+        width: 270px
+        &:nth-child(n+1)
+            margin-left: 0
+            margin-right: 0 
+        &__oldPrice
+            font-size: 13px
+        &__newPrice
+            font-size: 18px
+    .button
+        &_catalog
+            width: 118px
+            height: 35px
+            padding-top: 8px
 
 @media (max-width: 575px)    
     .header
@@ -154,6 +187,28 @@
                 margin-left: 23px
         .slick-dots
             padding-left: 95px
+    .catalog
+        padding-bottom: 35px          
+        &__content
+            justify-content: center
+            margin-top: 30px
+            display: none
+            // &__active
+            //     display: flex
+        &__tabs
+            margin-top: 25px
+        &__tab
+            padding-top: 15px
+            width: 105px
+            font-size: 12px     
+        .slider__catalog
+            display: block       
+    .catalog-item        
+        width: 300px
+        margin: 0
+        margin-top: 20px
+
+
 
 
     

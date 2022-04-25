@@ -1,4 +1,5 @@
 .catalog
+    min-height: 829px
     padding-bottom: 103px
     &__tabs
         margin-top: 69px
@@ -21,7 +22,7 @@
         transform: skewX(-25deg)
         margin: 0 5px
         cursor: pointer
-        transition: 0.7s all        
+        transition: 1s all        
         &:hover
             box-shadow: 3px 3px 20px $mainColor
             border: none
@@ -41,7 +42,26 @@
         flex-wrap: wrap
         &__active
             display: flex
-
+    .slider__catalog
+        position: relative
+        width: 300px
+        margin: 0 auto
+        display: none
+    .slick-prev, .slick-next
+        position: absolute
+        right: -66px
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+        background-color: #fff
+        z-index: 100
+        img
+            height: 50px
+            width: 31px
+    .slick-next
+        left: -66px
+        right: auto
+        border: none
         
 
 
