@@ -29,13 +29,19 @@
         .slick-dots
             padding-left: 80px
     .catalog
+        padding-bottom: 60px
         &__content
             justify-content: space-around
     .catalog-item
+        width: 48%
         &:nth-child(even)
-            margin-right: 30px
+            margin-right: 0
         &:nth-child(odd)
-            margin-left: 30px              
+            margin-left: 0   
+    .reviews
+        padding-bottom: 50px
+        &__descr
+            margin-left: 30px
                 
 @media (max-width: 766px)
     .header
@@ -119,10 +125,6 @@
         &__tab
             width: 160px             
     .catalog-item
-        width: 270px
-        &:nth-child(n+1)
-            margin-left: 0
-            margin-right: 0 
         &__oldPrice
             font-size: 13px
         &__newPrice
@@ -132,6 +134,24 @@
             width: 118px
             height: 35px
             padding-top: 8px
+    .reviews
+        padding-bottom: 40px
+        &__wrapper
+            flex-direction: column
+            align-items:  center
+            margin-top: 50px
+            &:nth-of-type(2)
+                margin-top: 30px                
+        &__descr
+            margin-left: 0
+        &__title
+            text-align: center
+            margin-top: 10px
+        &__subtitle
+            margin-top: 8px
+            text-align: center
+        &__text
+            text-align: center
 
 @media (max-width: 575px)    
     .header
@@ -142,12 +162,13 @@
         &__official
             margin-bottom: 0
             margin-top: 20px
+            margin-left: 15px
             margin-right: 10px
         &__contacts
-            margin-top: 15px
+            margin-top: 12px
     .button
         &_header
-            margin-top: 5px
+            margin-top: 0px
     .promo
         &__wrapper
             align-items: center
@@ -188,13 +209,12 @@
         .slick-dots
             padding-left: 95px
     .catalog
-        padding-bottom: 35px          
+        min-height: 650px
+        padding-bottom: 0         
         &__content
             justify-content: center
             margin-top: 30px
             display: none
-            // &__active
-            //     display: flex
         &__tabs
             margin-top: 25px
         &__tab

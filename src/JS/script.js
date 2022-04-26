@@ -110,3 +110,4 @@ $(document).ready(function(){
   });
 
 
+console.log(document.querySelectorAll(`.reviews__wrapper:nth-of-type(2)`))
