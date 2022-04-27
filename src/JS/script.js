@@ -106,8 +106,58 @@ $(document).ready(function(){
         prevArrow: '<button type="button" class="slick-prev"><img src="../img/slider_icon_right.jpg" alt=""></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="../img/slider_icon_left.jpg" alt=""></button>' ,
       });
+      $(`[data-modal=consultation]`).on(`click`,function(){
+        $(`.overlay, #consultation`).fadeIn(`slow`);
+      })
+      $(`.modal__close`).on(`click`,function(){
+        $(`.overlay, #consultation, #order, #thanks`).fadeOut(`slow`)
+      })
+      $(`.button_catalog`).each(function(i){
+        $(this).on(`click`,function(){
+          $(`#order .modal__descr`).text($(`.catalog-item__subtitle`).eq(i).text()
+          )
+          $(`.overlay, #order`).fadeIn(`slow`);
+        })
+      })
+      function validateForms(form){
+        $(form).validate({
+          rules:{
+            name: "required",
+            phone: "required",
+            email: {
+              required: true,
+              email: true
+            }
+          },
+          messages:{
+            name: `Пожалуйста, введите своё имя`,
+            phone: `Пожалуйста, введите свой телефон`,
+            email:{
+              required: `Пожалуйста, введите свою почту`,
+              email: "Неправильно введён адрес почты"
+            }
+          }
+  
+        })
+      }
+      validateForms(`#consultation form`)
+      validateForms(`#order form`)
+      validateForms(`#consultation-form`)
 
+      // $(`form`).submit(function(e){
+      //   e.preventDefault();
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "/mailer/smart.php",
+      //     data: $(this).serialize()
+      //   }).done(function(){
+      //     $(this).find(`input`).val("");
+      //     $(`#consultation, #order`).fadeOut()
+      //     $(`.overlay, #thanks`).fadeIn()
+      //     $(`form`).trigger(`reset`);
+      //   })
+      //   return false;
+      // })      
   });
 
 
-console.log(document.querySelectorAll(`.reviews__wrapper:nth-of-type(2)`))
