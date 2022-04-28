@@ -11,6 +11,15 @@
     &__item-Icon
         display: block
         margin: 0 auto
+        &_animated
+            animation: heartbeat 2s ease infinite
+            &:hover
+                animation-play-state: paused
+    .zxc
+        animation-name: bounceOutRight
+        animation-iteration-count: infinite
+        animation-duration: 5s
+        animation-timing-function: ease-in
     &__item-Subheader
         font-size: 18px
         font-weight: 700
@@ -27,3 +36,4 @@
         a
             color: #f00
             text-decoration: underline
+
